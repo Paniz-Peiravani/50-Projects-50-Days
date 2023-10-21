@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+/*
+Universal selector(add to everything)
+If we add any padding or etc it will not affect the width 
+*/
+* {
+    box-sizing: boarder-box;
+}
+
+/*
+using the font from google font
+*/
+body {
+    font-family: 'Muli', sans-serif;
+
+    /* put everything in a row and we will edit it later */
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    /*take the entire height of the brower
+    center both ways*/
+    height: 100vh;
+
+    overflow: hidden;
+    margin: 0;
+}
+
+/* For background images in div*/
+.panel[data-bg] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: black;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.container {
+    /*horizontal in a row*/
+    display: flex;
+
+    /*
+    - view port width
+    - 90 of 100
+    */
+    width: 90vw;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(7),
+    .panel:nth-of-type(8) {
+        display: none;
+    }
+}
