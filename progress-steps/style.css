@@ -77,8 +77,7 @@ body {
 
 .btn {
   background-color: var(--line-border-fill);
-  color: 
-  black;
+  color: white;
   border: 0;
   border-radius: 6px;
   cursor: pointer;
