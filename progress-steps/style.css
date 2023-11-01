@@ -1,31 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+
 :root {
-  --line-border-fill: #3498db;
-  --line-border-empty: #383838;
-
+  --line-border-fill: #e27396;
+  --line-border-empty: #e0e0e0;
 }
-
+/*
+Universal selector(add to everything)
+If we add any padding or etc it will not affect the width 
+*/
 * {
-  box-sizing: border-box;
+  box-sizing: boarder-box;
 }
 
+/*
+using the font from google font
+*/
 body {
-  background-color: #1f1f1f;
+  background-color: #eaf2d7;
   font-family: 'Muli', sans-serif;
+
+  /* put everything in a row and we will edit it later */
   display: flex;
+
   align-items: center;
   justify-content: center;
+
+  /*take the entire height of the brower
+    center both ways*/
   height: 100vh;
+
   overflow: hidden;
   margin: 0;
 }
 
-.container {
+.container{
   text-align: center;
 }
 
-.progress-container {
+.progress-container{
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -34,7 +47,7 @@ body {
   width: 350px;
 }
 
-.progress-container::before {
+.progress-container::before{
   content: '';
   background-color: var(--line-border-empty);
   position: absolute;
@@ -46,7 +59,7 @@ body {
   z-index: -1;
 }
 
-.progress {
+.progress{
   background-color: var(--line-border-fill);
   position: absolute;
   top: 50%;
@@ -58,36 +71,36 @@ body {
   transition: 0.4s ease;
 }
 
-.circle {
-  background-color: #1f1f1f;
-  color:#e2e2e2;
+.circle{
+  background-color: #fff;
+  color: #999;
   border-radius: 50%;
   height: 30px;
   width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid var(--line-border-empty);
-  transition: 0.4s ease;
+  border: 3px solid #efcfe3;
+  transition: .4s ease;
 }
 
-.circle.active {
+.circle.active{
   border-color: var(--line-border-fill);
 }
 
-.btn {
+.btn{
   background-color: var(--line-border-fill);
-  color: white;
+  color: #fff;
   border: 0;
   border-radius: 6px;
   cursor: pointer;
   font-family: inherit;
   padding: 8px 30px;
   margin: 5px;
-  font-size: 14px;
+  font-size:14px
 }
 
-.btn:active {
+.btn:active{
   transform: scale(0.98);
 }
 
@@ -95,7 +108,7 @@ body {
   outline: 0;
 }
 
-.btn:disabled {
+.btn:disabled{
   background-color: var(--line-border-empty);
   cursor: not-allowed;
 }
